@@ -9,6 +9,6 @@ export const Container = styled.View`
 export const Title = styled.Text`
     font-size: 24px;
     color: #f4ede8;
-    font-family: 'RobotSlab-Medium';
-    margin: 64px 0px 24px
+    font-family: 'RobotoSlab-Medium';
+    margin: 64px 0px 24px;
 `
