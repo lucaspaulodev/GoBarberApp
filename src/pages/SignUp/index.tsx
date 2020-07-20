@@ -1,8 +1,9 @@
 import React, {useRef, useCallback} from 'react'
 import {Image, View, ScrollView, KeyboardAvoidingView, Platform, TextInput, Alert} from 'react-native'
 import Icon from 'react-native-vector-icons/Feather'
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation, NavigationHelpersContext} from '@react-navigation/native'
 import * as Yup from 'yup'
+import api from '../../services/api'
 
 import getValidationErrors from '../../utils/getValidationErrors'
 
@@ -46,9 +47,12 @@ const SignUp: React.FC = () =>{
                 abortEarly: false,
             })
 
-            // await api.post('users', data)
+            await api.post('users', data)
 
-            // history.push('/');
+
+            Alert.alert('Cadastro realizado com sucesso, você ja pode fazer login');
+
+            navigation.goBack()
         } catch(err) {
             if (err instanceof Yup.ValidationError){
                 const errors = getValidationErrors(err)
