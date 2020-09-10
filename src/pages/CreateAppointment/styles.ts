@@ -142,7 +142,7 @@ export const Hour = styled(RectButton)<HourProps>`
   border-radius: 10px;
   margin-right: 8px;
 
-  opacity: ${(props) => (props.available ? 1 : 0.3)}
+  opacity: ${(props) => (props.available ? 1 : 0.3)};
 `;
 
 export const HourText = styled.Text<HourTextProps>`
