@@ -133,7 +133,7 @@ export const SectionTitle = styled.Text`
 export const SectionContent = styled.ScrollView.attrs({
   contentContainerStyle: {paddingHorizontal: 24},
   horizontal: true,
-  showsHorizontalIndicator: false;
+  showsHorizontalIndicator: false,
 })``;
 
 export const Hour = styled(RectButton)<HourProps>`
@@ -149,5 +149,20 @@ export const HourText = styled.Text<HourTextProps>`
   color: ${(props) => (props.selected ? '#232129' : '#f4ede8')};
   font-family: 'RobotoSlab-Regular';
   font-size: 16px;
+`;
+
+export const CreateAppointmentButton = styled(RectButton)`
+  height: 50px;
+  background: #ff9000;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24px 24px;
+`;
+
+export const CreateAppointmentText = styled.Text`
+  font-family: 'RobotoSlab-Medium';
+  font-size: 18px;
+  color: #232129;
 `;
 
